@@ -1,13 +1,13 @@
 version: "3.8"
 services:
   axpc-bd:
-    image: axpc-bd:latest
+    image: pedrazadumer/axpc-bd:latest
     ports:
       - "3306:3306"
     environment:
       - "MYSQL_ROOT_PASSWORD=root"
   axpc-clientes:
-    image: axpc-clientes:latest
+    image: pedrazadumer/axpc-clientes:latest
     ports:
       - "8080:8080"
     environment:
@@ -15,6 +15,6 @@ services:
     depends_on:
       - axpc-bd
   axpc-ui:
-    image: axpc-ui:latest
+    image: pedrazadumer/axpc-ui:latest
     ports:
       - "3001:3000"
